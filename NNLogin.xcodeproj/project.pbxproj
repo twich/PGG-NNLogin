@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80F6592819A7C9CF00B89145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6592719A7C9CF00B89145 /* Foundation.framework */; };
+		80F6592A19A7C9CF00B89145 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6592919A7C9CF00B89145 /* CoreGraphics.framework */; };
+		80F6592C19A7C9CF00B89145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6592B19A7C9CF00B89145 /* UIKit.framework */; };
+		80F6593219A7C9CF00B89145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80F6593019A7C9CF00B89145 /* InfoPlist.strings */; };
+		80F6593419A7C9CF00B89145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F6593319A7C9CF00B89145 /* main.m */; };
+		80F6593819A7C9CF00B89145 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F6593719A7C9CF00B89145 /* AppDelegate.m */; };
+		80F6593B19A7C9CF00B89145 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F6593919A7C9CF00B89145 /* Main_iPhone.storyboard */; };
+		80F6593E19A7C9CF00B89145 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F6593C19A7C9CF00B89145 /* Main_iPad.storyboard */; };
+		80F6594119A7C9CF00B89145 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F6594019A7C9CF00B89145 /* ViewController.m */; };
+		80F6594319A7C9CF00B89145 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F6594219A7C9CF00B89145 /* Images.xcassets */; };
+		80F6594A19A7C9CF00B89145 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6594919A7C9CF00B89145 /* XCTest.framework */; };
+		80F6594B19A7C9CF00B89145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6592719A7C9CF00B89145 /* Foundation.framework */; };
+		80F6594C19A7C9CF00B89145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F6592B19A7C9CF00B89145 /* UIKit.framework */; };
+		80F6595419A7C9CF00B89145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80F6595219A7C9CF00B89145 /* InfoPlist.strings */; };
+		80F6595619A7C9CF00B89145 /* NNLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F6595519A7C9CF00B89145 /* NNLoginTests.m */; };
+		80F6596119A7F7E000B89145 /* NNAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F6596019A7F7E000B89145 /* NNAnalyticsController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80F6594D19A7C9CF00B89145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80F6591C19A7C9CF00B89145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80F6592319A7C9CF00B89145;
+			remoteInfo = NNLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80F6592419A7C9CF00B89145 /* NNLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F6592719A7C9CF00B89145 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80F6592919A7C9CF00B89145 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80F6592B19A7C9CF00B89145 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80F6592F19A7C9CF00B89145 /* NNLogin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NNLogin-Info.plist"; sourceTree = "<group>"; };
+		80F6593119A7C9CF00B89145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80F6593319A7C9CF00B89145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80F6593519A7C9CF00B89145 /* NNLogin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NNLogin-Prefix.pch"; sourceTree = "<group>"; };
+		80F6593619A7C9CF00B89145 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80F6593719A7C9CF00B89145 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80F6593A19A7C9CF00B89145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		80F6593D19A7C9CF00B89145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		80F6593F19A7C9CF00B89145 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80F6594019A7C9CF00B89145 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80F6594219A7C9CF00B89145 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80F6594819A7C9CF00B89145 /* NNLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F6594919A7C9CF00B89145 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		80F6595119A7C9CF00B89145 /* NNLoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NNLoginTests-Info.plist"; sourceTree = "<group>"; };
+		80F6595319A7C9CF00B89145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80F6595519A7C9CF00B89145 /* NNLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNLoginTests.m; sourceTree = "<group>"; };
+		80F6595F19A7F7E000B89145 /* NNAnalyticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAnalyticsController.h; sourceTree = "<group>"; };
+		80F6596019A7F7E000B89145 /* NNAnalyticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAnalyticsController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80F6592119A7C9CF00B89145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6592A19A7C9CF00B89145 /* CoreGraphics.framework in Frameworks */,
+				80F6592C19A7C9CF00B89145 /* UIKit.framework in Frameworks */,
+				80F6592819A7C9CF00B89145 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F6594519A7C9CF00B89145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6594A19A7C9CF00B89145 /* XCTest.framework in Frameworks */,
+				80F6594C19A7C9CF00B89145 /* UIKit.framework in Frameworks */,
+				80F6594B19A7C9CF00B89145 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80F6591B19A7C9CF00B89145 = {
+			isa = PBXGroup;
+			children = (
+				80F6592D19A7C9CF00B89145 /* NNLogin */,
+				80F6594F19A7C9CF00B89145 /* NNLoginTests */,
+				80F6592619A7C9CF00B89145 /* Frameworks */,
+				80F6592519A7C9CF00B89145 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80F6592519A7C9CF00B89145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80F6592419A7C9CF00B89145 /* NNLogin.app */,
+				80F6594819A7C9CF00B89145 /* NNLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80F6592619A7C9CF00B89145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80F6592719A7C9CF00B89145 /* Foundation.framework */,
+				80F6592919A7C9CF00B89145 /* CoreGraphics.framework */,
+				80F6592B19A7C9CF00B89145 /* UIKit.framework */,
+				80F6594919A7C9CF00B89145 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80F6592D19A7C9CF00B89145 /* NNLogin */ = {
+			isa = PBXGroup;
+			children = (
+				80F6593619A7C9CF00B89145 /* AppDelegate.h */,
+				80F6593719A7C9CF00B89145 /* AppDelegate.m */,
+				80F6593919A7C9CF00B89145 /* Main_iPhone.storyboard */,
+				80F6593C19A7C9CF00B89145 /* Main_iPad.storyboard */,
+				80F6595F19A7F7E000B89145 /* NNAnalyticsController.h */,
+				80F6596019A7F7E000B89145 /* NNAnalyticsController.m */,
+				80F6593F19A7C9CF00B89145 /* ViewController.h */,
+				80F6594019A7C9CF00B89145 /* ViewController.m */,
+				80F6594219A7C9CF00B89145 /* Images.xcassets */,
+				80F6592E19A7C9CF00B89145 /* Supporting Files */,
+			);
+			path = NNLogin;
+			sourceTree = "<group>";
+		};
+		80F6592E19A7C9CF00B89145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F6592F19A7C9CF00B89145 /* NNLogin-Info.plist */,
+				80F6593019A7C9CF00B89145 /* InfoPlist.strings */,
+				80F6593319A7C9CF00B89145 /* main.m */,
+				80F6593519A7C9CF00B89145 /* NNLogin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80F6594F19A7C9CF00B89145 /* NNLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				80F6595519A7C9CF00B89145 /* NNLoginTests.m */,
+				80F6595019A7C9CF00B89145 /* Supporting Files */,
+			);
+			path = NNLoginTests;
+			sourceTree = "<group>";
+		};
+		80F6595019A7C9CF00B89145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F6595119A7C9CF00B89145 /* NNLoginTests-Info.plist */,
+				80F6595219A7C9CF00B89145 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80F6592319A7C9CF00B89145 /* NNLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F6595919A7C9CF00B89145 /* Build configuration list for PBXNativeTarget "NNLogin" */;
+			buildPhases = (
+				80F6592019A7C9CF00B89145 /* Sources */,
+				80F6592119A7C9CF00B89145 /* Frameworks */,
+				80F6592219A7C9CF00B89145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NNLogin;
+			productName = NNLogin;
+			productReference = 80F6592419A7C9CF00B89145 /* NNLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80F6594719A7C9CF00B89145 /* NNLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F6595C19A7C9CF00B89145 /* Build configuration list for PBXNativeTarget "NNLoginTests" */;
+			buildPhases = (
+				80F6594419A7C9CF00B89145 /* Sources */,
+				80F6594519A7C9CF00B89145 /* Frameworks */,
+				80F6594619A7C9CF00B89145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80F6594E19A7C9CF00B89145 /* PBXTargetDependency */,
+			);
+			name = NNLoginTests;
+			productName = NNLoginTests;
+			productReference = 80F6594819A7C9CF00B89145 /* NNLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80F6591C19A7C9CF00B89145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "PepperGum Games";
+				TargetAttributes = {
+					80F6594719A7C9CF00B89145 = {
+						TestTargetID = 80F6592319A7C9CF00B89145;
+					};
+				};
+			};
+			buildConfigurationList = 80F6591F19A7C9CF00B89145 /* Build configuration list for PBXProject "NNLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80F6591B19A7C9CF00B89145;
+			productRefGroup = 80F6592519A7C9CF00B89145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80F6592319A7C9CF00B89145 /* NNLogin */,
+				80F6594719A7C9CF00B89145 /* NNLoginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80F6592219A7C9CF00B89145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6593E19A7C9CF00B89145 /* Main_iPad.storyboard in Resources */,
+				80F6594319A7C9CF00B89145 /* Images.xcassets in Resources */,
+				80F6593B19A7C9CF00B89145 /* Main_iPhone.storyboard in Resources */,
+				80F6593219A7C9CF00B89145 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F6594619A7C9CF00B89145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6595419A7C9CF00B89145 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80F6592019A7C9CF00B89145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6594119A7C9CF00B89145 /* ViewController.m in Sources */,
+				80F6593819A7C9CF00B89145 /* AppDelegate.m in Sources */,
+				80F6596119A7F7E000B89145 /* NNAnalyticsController.m in Sources */,
+				80F6593419A7C9CF00B89145 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F6594419A7C9CF00B89145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F6595619A7C9CF00B89145 /* NNLoginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80F6594E19A7C9CF00B89145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80F6592319A7C9CF00B89145 /* NNLogin */;
+			targetProxy = 80F6594D19A7C9CF00B89145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80F6593019A7C9CF00B89145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F6593119A7C9CF00B89145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		80F6593919A7C9CF00B89145 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F6593A19A7C9CF00B89145 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		80F6593C19A7C9CF00B89145 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F6593D19A7C9CF00B89145 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		80F6595219A7C9CF00B89145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F6595319A7C9CF00B89145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80F6595719A7C9CF00B89145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80F6595819A7C9CF00B89145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80F6595A19A7C9CF00B89145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NNLogin/NNLogin-Prefix.pch";
+				INFOPLIST_FILE = "NNLogin/NNLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		80F6595B19A7C9CF00B89145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NNLogin/NNLogin-Prefix.pch";
+				INFOPLIST_FILE = "NNLogin/NNLogin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		80F6595D19A7C9CF00B89145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NNLogin.app/NNLogin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NNLogin/NNLogin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NNLoginTests/NNLoginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		80F6595E19A7C9CF00B89145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NNLogin.app/NNLogin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NNLogin/NNLogin-Prefix.pch";
+				INFOPLIST_FILE = "NNLoginTests/NNLoginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80F6591F19A7C9CF00B89145 /* Build configuration list for PBXProject "NNLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F6595719A7C9CF00B89145 /* Debug */,
+				80F6595819A7C9CF00B89145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80F6595919A7C9CF00B89145 /* Build configuration list for PBXNativeTarget "NNLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F6595A19A7C9CF00B89145 /* Debug */,
+				80F6595B19A7C9CF00B89145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80F6595C19A7C9CF00B89145 /* Build configuration list for PBXNativeTarget "NNLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F6595D19A7C9CF00B89145 /* Debug */,
+				80F6595E19A7C9CF00B89145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80F6591C19A7C9CF00B89145 /* Project object */;
+}
