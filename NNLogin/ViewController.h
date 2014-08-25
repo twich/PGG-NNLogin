@@ -23,7 +23,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *ageTxt;
 @property (weak, nonatomic) IBOutlet UITextField *raceTxt;
 @property (weak, nonatomic) IBOutlet UITextField *nativeLanguageTxt;
+@property (weak, nonatomic) IBOutlet UIButton *exitNewPlayerSetup;
 - (IBAction)tappedCreateNewPlayer:(id)sender;
 - (IBAction)tappedExitNewPlayerCreation:(id)sender;
+
 
 @end

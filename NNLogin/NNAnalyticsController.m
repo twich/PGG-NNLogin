@@ -11,12 +11,91 @@
 
 @implementation NNAnalyticsController
 
-+(NSString*)formatUserDataForUpload:(NSDictionary*) userData{
-
++(BOOL)formatDataToJSONAndPost:(NSArray*) userData postType:(NNPostType)postType{
+    
+    NSArray *postDataKeys = [NSArray new];
+    NSString *apiEndPointURL;
+    
+    // TODO: request that web designer notify of any future alterations
+    switch (postType) {
+        case NNUserPost:
+            postDataKeys = @[@"username",
+                             @"first_name",
+                             @"last_name",
+                             @"email",
+                             @"groups",
+                             @"user_permissions"];
+            apiEndPointURL = @"http://safe-depths-8610.herokuapp.com/api/v1/users/";
+            break;
+            
+        case NNWordManipulationPost:
+            postDataKeys = @[@"session",
+                             @"user",
+                             @"word_manipulated",
+                             @"active_powerups",
+                             @"shape_match",
+                             @"sm_direction",
+                             @"sm_distance",
+                             @"sm_shape_match",
+                             @"sm_hair_match",
+                             @"network_manipulation",
+                             @"nm_scaffolding_of_word",
+                             @"nm_color_level",
+                             @"nm_network_connection",
+                             @"nm_network_combo",
+                             @"nm_network_combo_type"];
+            apiEndPointURL = @"http://safe-depths-8610.herokuapp.com/api/v1/word-manipulations/";
+            break;
+            
+        case NNSessionsPost:
+            postDataKeys = @[@"user",
+                             @"start_time",
+                             @"end_time",
+                             @"total_time"];
+            apiEndPointURL = @"http://safe-depths-8610.herokuapp.com/api/v1/sessions/";
+            break;
+            
+        case NNTimePlayingPost:
+            postDataKeys = @[@"session",
+                             @"user",
+                             @"screen",
+                             @"time_on_screen"];
+            apiEndPointURL = @"http://safe-depths-8610.herokuapp.com/api/v1/time-playings/";
+            break;
+            
+        case NNTranslationFilterUsagesPost:
+            postDataKeys = @[@"session",
+                             @"user",
+                             @"level",
+                             @"quantity_filter_used",
+                             @"total_time_used"];
+            apiEndPointURL = @"http://safe-depths-8610.herokuapp.com/api/v1/translation-filter-usages/";
+            break;
+        default:
+            break;
+    }
+    
+    NSDictionary *postData = [[NSDictionary alloc]initWithObjects:userData forKeys:postDataKeys];
+    
+    NSString *jsonString = [self createJSONStringFrom:postData];
+    if (jsonString == nil) {
+        return NO;
+    }
+    BOOL postedSuccessfully =[self postUserDataToServer:jsonString
+                                                     to:apiEndPointURL
+                                          usingUsername:@"username"
+                                               password:@"password"];
+    if (postedSuccessfully) {
+        return YES;
+    }
+    return NO;
+}
+    
++(NSString*)createJSONStringFrom:(NSDictionary*)data{
     NSError *error = nil;
     
     //Serialize the JSON data
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:userData
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
                                                        options:0
                                                          error:&error];
     
@@ -35,11 +114,10 @@
     return nil;
 }
 
-+(BOOL)postUserDataToServer:(NSString*)jsonString usingUsername:(NSString*)username password:(NSString*)password{
++(BOOL)postUserDataToServer:(NSString*)jsonString to:(NSString*)apiEndPointUrl usingUsername:(NSString*)username password:(NSString*)password{
 
     //Formatting the URL
-    NSString *urlAsString = @"http://safe-depths-8610.herokuapp.com/users/";
-    NSURL *url = [NSURL URLWithString:urlAsString];
+    NSURL *url = [NSURL URLWithString:apiEndPointUrl];
     
     //Formatting authentication credentials
     NSString *authStr = [NSString stringWithFormat:@"%@:%@", username, password];

@@ -8,34 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-// TODO: Add all post types that will be sent to web server
-
 /*!
  * @typedef NNPostType
- * @brief Possible data to post to web service
- * @constant NNPlayer Player profile data
- * @constant NNTouch Details around a players touch during game
- * @constant NNActionPrompt Player action prompt details
+ * @brief Each type enumeration represents a separate API endpoint
  */
 typedef NS_ENUM(NSUInteger, NNPostType) {
-    ///Player profile data
-    NNPlayer,
-    ///Details around a players touch during game
-    NNTouch,
-    ///Player action prompt details
-    NNActionPrompt,
+    ///Time Playing API endpoint
+    NNTimePlayingPost,
+    ///Word manipulation API endpoint
+    NNWordManipulationPost,
+    ///Translation filter usage API endpoint
+    NNTranslationFilterUsagesPost,
+    ///User details API endpoint
+    NNUserPost,
+    ///Session details API endpoint
+    NNSessionsPost
 };
 
 @interface NNAnalyticsController : NSObject<NSURLConnectionDelegate>
-
-/*!
- * @discussion Posts data to a remote web service specified in the method
- * @param userData Serialized JSON String of the user's data to be transfered to the webservice
- * @param username Username credential to access the webservice
- * @param password Password credential to access the webservice
- * @return BOOL YES means the POST was successful
- */
-+(BOOL)postUserDataToServer:(NSString*)userData usingUsername:(NSString*)username password:(NSString*)password;
 
 // TODO: Once API data fields are finalized
 // rework method to accept array of values. Create arrays for Keys based on NNPostType.
@@ -44,6 +34,6 @@ typedef NS_ENUM(NSUInteger, NNPostType) {
  * @param userData The data to be serialized
  * @return NSString JSON formatted NSString
  */
-+(NSString*)formatUserDataForUpload:(NSDictionary*) userData;
++(BOOL)formatDataToJSONAndPost:(NSArray*) userData postType:(NNPostType)postType;
 
 @end

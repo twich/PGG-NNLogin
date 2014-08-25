@@ -18,11 +18,12 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
 @interface ViewController (){
     NSMutableArray *playerList;//holds data to be used in picker view
     NSMutableArray *existingPlayers;//holds dictionaries of existing player details
-    NSString *filePath;
+    NSString *filePath;//file path to existingUsers.txt
 }
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad
 {
@@ -38,7 +39,7 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
     if (fileExists) {
         existingPlayers = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
         for (NSDictionary *player in existingPlayers) {
-            [playerList addObject:[NSString stringWithFormat:@"%@ %@.",[player objectForKey:@"first_name"],[player objectForKey:@"last_name"]]];
+            [playerList addObject:[NSString stringWithFormat:@"%@ %@",[player objectForKey:@"first_name"],[player objectForKey:@"last_name"]]];
         }
     }
     else{
@@ -125,7 +126,7 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
     }
     else{
         [UIView animateWithDuration:0.25 animations:^{
-            self.NewPlayerView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+            self.NewPlayerView.center = CGPointMake(240, 160);
         }];
     }
     [self.firstNameTxt becomeFirstResponder];
@@ -175,7 +176,8 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
     }
     else{
         [UIView animateWithDuration:0.25 animations:^{
-            self.NewPlayerView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height+(self.NewPlayerView.bounds.size.height/2));
+            self.exitNewPlayerSetup.center= CGPointMake(417, 20);
+            self.NewPlayerView.center = CGPointMake(240, 460);
         }];
     }
 
@@ -211,12 +213,19 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
 
 -(BOOL)validData:(NSString*)string field:(newPlayerFields)field{
     // TODO: Add criteria for validation based on API guidelines
+//    NSUInteger maxNameLength = 30;
+//    
 //    switch (field) {
 //        case NPFirstName:
-//            <#statements#>
+//            if (string.length <= maxNameLength) {
+//                return YES;
+//            }
+//            return NO;
 //            break;
 //        case NPLastName:
-//            <#statements#>
+//            if (string.length <= maxNameLength){
+//                ret
+//            }
 //            break;
 //        case NPAge:
 //            <#statements#>
@@ -253,7 +262,7 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 1) {
         if (buttonIndex == 0) {
-            //TODO: Add code to enter game here
+            //TODO: Add code to enter game here and set global user and session variables
             NSLog(@"Entered Game");
         }
         else{
@@ -285,14 +294,53 @@ typedef NS_ENUM(NSUInteger, newPlayerFields) {
     return YES;
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    // TODO: Add code to keep active textbox from under keyboard
     
-//    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-//        if (textField == self.ageTxt) {
-//            [UIView animateWithDuration:0.25 animations:^{
-//                self.NewPlayerView.center = CGPointMake(self.view.bounds.size.width/2, self.firstNameTxt.bounds.origin.y);
-//            }];
-//        }
-//    }
+    if([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad) {
+        return;
+    }
+    else{
+        CGPoint centerStartPoint = CGPointMake(240, 160);
+        CGPoint exitBtnStartPoint = CGPointMake(417, 20);
+        CGFloat offsetDistance = 33;
+        
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+            if (textField == self.firstNameTxt) {
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y);
+                }];
+            }
+            else if (textField == self.lastNameTxt) {
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y-offsetDistance);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y+offsetDistance);
+                }];
+            }
+            else if (textField == self.ageTxt) {
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y-offsetDistance*2);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y+offsetDistance*2);
+                }];
+            }
+            else if (textField == self.raceTxt){
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y-offsetDistance*3);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y+offsetDistance*3);
+                }];
+            }
+            else if (textField == self.nativeLanguageTxt){
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y-offsetDistance*4);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y+offsetDistance*4);
+                }];
+            }
+            else if (textField == self.raceTxt){
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.NewPlayerView.center = CGPointMake(centerStartPoint.x, centerStartPoint.y-offsetDistance*5);
+                    self.exitNewPlayerSetup.center = CGPointMake(exitBtnStartPoint.x, exitBtnStartPoint.y+offsetDistance*5);
+                }];
+            }
+        }
+    }
 }
 @end

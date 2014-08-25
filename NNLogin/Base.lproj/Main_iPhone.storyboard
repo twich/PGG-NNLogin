@@ -184,6 +184,7 @@
                         <outlet property="NewPlayerView" destination="S0p-ea-CgT" id="5XD-Rc-i71"/>
                         <outlet property="ageTxt" destination="1gH-Ur-qQH" id="1ik-Ly-Zqm"/>
                         <outlet property="existingUserPicker" destination="zyu-GU-vyB" id="Pgz-C8-eOG"/>
+                        <outlet property="exitNewPlayerSetup" destination="Y0U-Yp-YjO" id="7ec-1M-4YT"/>
                         <outlet property="firstNameTxt" destination="gzk-Wd-ORT" id="eaM-ex-rSi"/>
                         <outlet property="lastNameTxt" destination="w2O-Af-Nmb" id="M4V-9S-ISv"/>
                         <outlet property="nativeLanguageTxt" destination="xpG-w5-q1Y" id="YWQ-8y-dwK"/>
